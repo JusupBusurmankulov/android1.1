@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1C3E4A"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cv_card_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="30dp"
+       app:strokeWidth="3dp"
+        app:strokeColor="@color/white"
+        app:cardCornerRadius="90dp"
+        >
+
+        <ImageView
+            android:id="@+id/im_zxc"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+
+            android:scaleType="centerCrop"
+            android:src="@drawable/maxresdefault"
+            />
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+
+
+    <EditText
+        android:id="@+id/et_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/rounded_pass"
+        android:drawableStart="@drawable/ic_person"
+        android:drawablePadding="20dp"
+        android:hint="Email"
+        android:padding="5dp"
+        android:textColorHint="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@+id/cv_card_view" />
+
+
+    <EditText
+        android:id="@+id/et_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/rounded_pass"
+        android:drawableStart="@drawable/ic_lock"
+        android:drawablePadding="20dp"
+        android:hint="Password"
+        android:padding="5dp"
+        android:textColorHint="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@+id/et_email"
+        tools:layout_editor_absoluteX="30dp" />
+
+    <CheckBox
+        android:id="@+id/check_box"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:buttonTint="#FFFFFF"
+        android:outlineAmbientShadowColor="@color/white"
+        android:text="Remember Me"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:visibility="visible"
+        app:layout_constraintLeft_toLeftOf="@id/et_password"
+        app:layout_constraintTop_toBottomOf="@id/et_password" />
+
+    <TextView
+        android:id="@+id/tv_forget_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:drawableStart="@drawable/ic_unlock"
+        android:drawablePadding="5dp"
+        android:text="Forget Password"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toRightOf="@+id/check_box"
+        app:layout_constraintRight_toRightOf="@+id/et_password"
+        app:layout_constraintTop_toBottomOf="@+id/et_password" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        app:cornerRadius="40dp"
+        android:backgroundTint="@color/white"
+        android:padding="12dp"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="36dp"
+        android:text="LOGIN"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/check_box"
+        tools:layout_editor_absoluteX="30dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_sign_up"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="15dp"
+        app:cornerRadius="40dp"
+        android:padding="12dp"
+        android:gravity="center"
+        android:backgroundTint="#1C3E4A"
+        app:strokeColor="@color/white"
+        app:strokeWidth="3dp"
+        android:text="SIGN UP"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/btn_login" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
